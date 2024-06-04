@@ -25,10 +25,6 @@ export class AuthService {
   ) {}
 
   async register(dto: CreateUserDto) {
-    const refreshTokens = await this.refreshTokenModel.find();
-    refreshTokens.forEach(async (token) => {
-      await token.deleteOne();
-    });
     return await this.userService.createOne(dto);
   }
 
