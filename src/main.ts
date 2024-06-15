@@ -24,7 +24,7 @@ async function bootstrap() {
     }),
   );
   const corsOptions: CorsOptions = {
-    origin: ['http://localhost:3000'],
+    origin: ['https://aissa-dev1-todo-app.vercel.app', 'http://localhost:3000'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   };
